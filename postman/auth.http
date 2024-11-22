@@ -1,0 +1,22 @@
+@base_url = http://localhost:8000/v1/api
+@api_key = key01
+
+### Signup
+POST {{base_url}}/auth/signup
+Content-Type: application/json
+
+{
+  "email": "hoangncd3@example.com",
+  "name": "test",
+  "password": "test"
+}
+
+### Login
+POST {{base_url}}/auth/login
+Content-Type: application/json
+x-api-key: {{api_key}}
+
+{
+  "email": "hoangncd3@example.com",
+  "password": "test"
+}
